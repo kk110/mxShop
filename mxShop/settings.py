@@ -34,17 +34,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    # 'django.contrib.admin',
+    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    # 'goods.apps.UsersConfig',
     'xadmin',
     'crispy_forms',
-    'reversion',
-    'DjangoUeditor3',
+    'DjangoUeditor',
     'rest_framework',
     'users',
     'goods',
@@ -53,7 +51,7 @@ INSTALLED_APPS = [
 ]
 
 # 重载系统的用户，让自定义用户生效
-AUTH_USER_MODEL = 'user.UserProfile'
+AUTH_USER_MODEL = 'users.UserProfile'
 # 设置media的保存路径
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 
@@ -99,8 +97,8 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'mxshop',
         'USER': 'root',
-        'PASSWORD': '123456',
-        'HOST': '127.0.0.1',
+        'PASSWORD': 'root',
+        'HOST': '39.105.81.234',
         'PORT': '3306',
         # 设置数据库引擎为innodb
         'OPTIONS': {'init_command':'SET default_storage_engine=INNODB;'}
