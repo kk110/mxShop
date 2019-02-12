@@ -1,5 +1,6 @@
 from django.apps import AppConfig
 
 
-class UsersConfig(AppConfig):
-    name = 'users'
+class TradeConfig(AppConfig):
+    name = 'trade'
+    verbose_name = '交易管理'
